@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const campsiteRouter = express.Router();
 
-// since this is a express application .use is for attaching middleware
+// since this is a express application .use is for attaching middleware (e.g. bodyParser)
 campsiteRouter.use(bodyParser.json());
 
 campsiteRouter
@@ -30,7 +30,7 @@ campsiteRouter
   .delete((req, res) => {
     res.end("Deleting all campsites");
   });
-  // Adding a route param to the end of the path (allows to store what the client sends as a part of the path as a route param)
+// Adding a route param to the end of the path (allows to store what the client sends as a part of the path as a route param)
 campsiteRouter
   .route("/:campsiteId")
   .all((req, res, next) => {

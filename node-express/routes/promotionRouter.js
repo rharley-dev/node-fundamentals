@@ -30,7 +30,7 @@ promotionRouter
   .delete((req, res) => {
     res.end("Deleting all promotions");
   });
-  // Adding a route param to the end of the path (allows to store what the client sends as a part of the path as a route param)
+// Adding a route param to the end of the path (allows to store what the client sends as a part of the path as a route param)
 promotionRouter
   .route("/:promotionId")
   .all((req, res, next) => {

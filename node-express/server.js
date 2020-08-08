@@ -12,7 +12,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 
-// Specifying root path for campsiteRouder.js
+// Specifying root path for routes
 app.use("/campsites", campsiteRouter);
 app.use("/promotions", promotionRouter);
 app.use("/partners", partnerRouter);

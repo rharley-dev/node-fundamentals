@@ -30,7 +30,7 @@ partnerRouter
   .delete((req, res) => {
     res.end("Deleting all partners");
   });
-  // Adding a route param to the end of the path (allows to store what the client sends as a part of the path as a route param)
+// Adding a route param to the end of the path (allows to store what the client sends as a part of the path as a route param)
 partnerRouter
   .route("/:partnerId")
   .all((req, res, next) => {
@@ -39,9 +39,7 @@ partnerRouter
     next(); // Passes control of routing to the next relevent method below
   })
   .get((req, res) => {
-    res.end(
-      `Will send details of the partner: ${req.params.partnerId} to you`
-    );
+    res.end(`Will send details of the partner: ${req.params.partnerId} to you`);
   })
   .post((req, res) => {
     res.statusCode = 403;
